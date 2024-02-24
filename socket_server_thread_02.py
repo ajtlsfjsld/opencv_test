@@ -62,9 +62,9 @@ try:
         client_socket, addr = server_socket.accept()
         client_sockets.append(client_socket)
         start_new_thread(threaded, (client_socket, addr))
-        print("참가자 수 : ", len(client_sockets))
+        print("Connected users : ", len(client_sockets))
 except Exception as e:
-    print('에러 : ', e)
+    print('error : ', e)
 
 finally:
     server_socket.close()
